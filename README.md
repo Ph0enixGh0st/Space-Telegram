@@ -1,5 +1,5 @@
 # Space-Telegram
-The script downloads images from NASA and SpaceX API for further upload into Telegram channel.
+The script downloads images from NASA and SpaceX API for further upload into Telegram channel via Telegram bot.
 
 ## How to install
 Using GitHub CLI:

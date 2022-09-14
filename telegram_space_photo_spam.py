@@ -24,6 +24,7 @@ def tg_spam():
 
     tg_token = os.environ['TG_TOKEN']
     bot = telegram.Bot(token=tg_token)
+    tg_channel=os.environ["TG_CHANNEL"]
     photo_path = "tg_upload_photos_pool\\"
         
     for root, dirs, files in os.walk(photo_path):
@@ -34,8 +35,8 @@ def tg_spam():
 
         for photo in files_pool:
 
-            bot.send_message(chat_id="@SPP_Bot_dvmn_edu", text=f"uploaded {photo}")
-            bot.send_document(chat_id="@SPP_Bot_dvmn_edu", document=open(f'{photo_path}\\{photo}', 'rb'))
+            bot.send_message(chat_id=tg_channel, text=f"uploaded {photo}")
+            bot.send_document(chat_id=tg_channel, document=open(f'{photo_path}\\{photo}', 'rb'))
             time.sleep(float(os.environ.get('LOG_INTERVAL')))
 
         random.shuffle(files_pool)

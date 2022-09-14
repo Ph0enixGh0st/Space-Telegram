@@ -20,16 +20,16 @@ pip install -r requirements.txt
 The script downloads photos from NASA and SpaceX API and then uploads them into Telegram channel via bot in infinite loop.
 
 ## How to run telegram_space_photo_spam.py
+```bash
+python telegram_space_photo_spam.py
+```
+![image](https://user-images.githubusercontent.com/108229516/190182368-05d7d0fb-928e-450c-85aa-da1a42c37209.png)
 
 
 # fetch_nasa_apod_images.py
 The script downloads images from NASA APOD API (Astronomy Picture of the Day). By default 5 images will be downloaded.
 
-
-
-
 ## How to run fetch_nasa_apod_images.py
-
 ```bash
 python fetch_nasa_apod_images.py -q {qty}
 ```
@@ -39,14 +39,27 @@ python fetch_nasa_apod_images.py -q {qty}
 
 
 # fetch_nasa_epic_images.py
+The script downloads images from NASA EPIC API (Earth Polychromatic Imaging Camera). By default 15 images will be downloaded.
 
+## How to run fetch_nasa_epic_images.py
+```bash
+python fetch_nasa_epic_images.py -q {qty}
+```
+![image](https://user-images.githubusercontent.com/108229516/190183357-baa20446-ca03-4471-bec7-8ce590dba149.png)
+
+![image](https://user-images.githubusercontent.com/108229516/190182910-b44c0333-ef85-4c73-8800-c34173b061db.png)
 
 
 # fetch_spacex_images.py
+The script downloads Space X launches images by launch id number. If launch id is not provided the script will download the latest launch photos.
 
+## How to run fetch_spacex_images.py
+```bash
+python fetch_spacex_images.py -l {launch id}
+```
+![image](https://user-images.githubusercontent.com/108229516/190184756-c3f669c7-ade3-478d-be58-671da5a15aee.png)
 
-
-
+![image](https://user-images.githubusercontent.com/108229516/190183896-175d7859-05f8-4b20-b810-764ce2449f13.png)
 
 
 ### Project Goals

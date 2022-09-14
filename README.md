@@ -35,6 +35,8 @@ Please write down the following lines in your .env file and save the file:
 TG_TOKEN={your Telegram token here}
 NASA_API_KEY={your API Key here}
 LOG_INTERVAL=30
+TG_CHANNEL=@{your Telegram channel name here}
+
 ```
 If you want to adjust the posting interval for your Telegram bot - you can change LOG_INTERVAL value.
 In this example log interval is set to 30 seconds.

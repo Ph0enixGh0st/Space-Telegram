@@ -18,7 +18,7 @@ pip install -r requirements.txt
 In order to run the scripts you will also need NASA API key, Telegram Token, and Telegram channel.
 NASA API Key can be obtained here: https://api.nasa.gov/
 
-To obtain a Telegram token there wull be additional steps:
+To obtain a Telegram token there will be additional steps:
 Run Telegram and connect with https://t.me/BotFather. Send the following commands in order to register Telegram bot:
 ```
 /start

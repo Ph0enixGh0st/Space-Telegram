@@ -1,12 +1,8 @@
 import argparse
-import os
 import requests
 
-from dotenv import load_dotenv
 from importlib.resources import path
 from pathlib import Path
-from urllib.parse import urlparse
-from urllib.parse import urlencode
 
 
 def fetch_spacex_images(path = "tg_upload_photos_pool\\", id="latest"):
@@ -14,12 +10,14 @@ def fetch_spacex_images(path = "tg_upload_photos_pool\\", id="latest"):
   launch_data_url = f"https://api.spacexdata.com/v5/launches/{id}"
   launch_data = requests.get(launch_data_url)
   launch_data = launch_data.json()
+  launch_data.raise_for_status()
   
   n = 0
   for photo in launch_data['links']["flickr"]["original"]:
   
     file_name = "spacex_" + str(n)
     launch_data = requests.get(photo)
+    launch_data.raise_for_status()
     with open(f"{path}/{file_name}.jpeg", 'wb') as file:
         file.write(launch_data.content)
     n += 1
@@ -27,8 +25,6 @@ def fetch_spacex_images(path = "tg_upload_photos_pool\\", id="latest"):
     
 
 def main():
-  
-  load_dotenv()
   
   path = "tg_upload_photos_pool\\"
   Path(f"{path}").mkdir(parents=True, exist_ok=True)
